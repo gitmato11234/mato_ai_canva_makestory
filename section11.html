@@ -100,14 +100,12 @@ h1,h2,h3,h4{font-family:"Noto Sans JP","Hiragino Kaku Gothic ProN",sans-serif;fo
 const obs=new IntersectionObserver(e=>{e.forEach(el=>{if(el.isIntersecting)el.target.classList.add("visible")})},{threshold:.1});
 document.querySelectorAll(".fade-up").forEach(el=>obs.observe(el));
 function sendHeight(){
-  const h = Math.max(document.body.scrollHeight, document.documentElement.scrollHeight);
-  window.parent.postMessage({iframeHeight: h}, "*");
+  const body = document.body;
+  body.style.height = "auto";
+  const h = Math.max(body.offsetHeight, body.scrollHeight);
+  window.parent.postMessage({iframeHeight: h + 2}, "*");
 }
-document.fonts.ready.then(function(){
-  sendHeight();
-  setTimeout(sendHeight, 300);
-  setTimeout(sendHeight, 800);
-});
-window.addEventListener("resize", function(){ setTimeout(sendHeight, 200); });
+document.fonts.ready.then(function(){ sendHeight(); });
+window.addEventListener("resize", function(){ sendHeight(); });
 </script>
 </body></html>
