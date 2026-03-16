@@ -1,8 +1,4 @@
-<!DOCTYPE html>
-<html lang="ja">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!DOCTYPE html><html lang="ja"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700;900&display=swap" rel="stylesheet">
 <style>
@@ -29,9 +25,9 @@ h1,h2,h3,h4{font-family:"Noto Sans JP","Hiragino Kaku Gothic ProN",sans-serif;fo
 .profile-card{background:#fff;border-radius:16px;padding:36px 32px;box-shadow:0 4px 24px rgba(0,0,0,.06);text-align:center}
 .profile-card__name{font-size:20px;font-weight:900;margin-bottom:4px}
 .profile-card__role{font-size:13px;color:var(--text-light);margin-bottom:20px}
-.profile-stats{display:flex;justify-content:center;gap:10px;flex-wrap:wrap;margin-bottom:20px}
-.profile-stat{background:linear-gradient(135deg,#F3E5F5,#E8EAF6);border-radius:8px;padding:10px 16px;font-size:13px;font-weight:700;white-space:nowrap}
-.profile-stat strong{color:var(--purple)}
+.profile-stats{display:grid;grid-template-columns:repeat(2,1fr);gap:10px;margin-bottom:20px}
+.profile-stat{background:linear-gradient(135deg,#F3E5F5,#E8EAF6);border-radius:8px;padding:10px 16px;font-size:13px;font-weight:700;text-align:center}
+.profile-stat strong{color:var(--purple);font-size:26px}
 .reason-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px;margin:28px 0}
 .reason-card{background:#fff;border-radius:12px;padding:24px 20px;box-shadow:0 2px 12px rgba(0,0,0,.04);text-align:center;transition:transform .2s}
 .reason-card:hover{transform:translateY(-3px)}
@@ -81,10 +77,9 @@ h1,h2,h3,h4{font-family:"Noto Sans JP","Hiragino Kaku Gothic ProN",sans-serif;fo
 .footer{background:var(--text);color:rgba(255,255,255,.5);text-align:center;padding:32px 16px;font-size:12px}
 .fade-up{opacity:0;transform:translateY(24px);transition:opacity .6s ease,transform .6s ease}
 .fade-up.visible{opacity:1;transform:translateY(0)}
-@media(max-width:600px){.section{padding:48px 0}.container{padding:0 16px}.profile-stats{gap:6px}.profile-stat{padding:8px 12px;font-size:12px}.reason-grid{grid-template-columns:1fr}.curriculum-header{flex-direction:column;text-align:center}.price-box{padding:36px 20px}.benefit-card{flex-direction:column;text-align:center;align-items:center}}
+@media(max-width:600px){.section{padding:48px 0}.container{padding:0 16px}.profile-stats{gap:6px;grid-template-columns:repeat(2,1fr)}.profile-stat{padding:8px 12px;font-size:12px}.profile-stat strong{font-size:22px}.reason-grid{grid-template-columns:1fr}.curriculum-header{flex-direction:column;text-align:center}.price-box{padding:36px 20px}.benefit-card{flex-direction:column;text-align:center;align-items:center}}
 </style>
-</head>
-<body>
+</head><body>
 <section class="section section--dark">
   <div class="container fade-up">
     <span class="section__label" style="background:rgba(255,255,255,.2);">SECTION 10</span>
@@ -94,35 +89,13 @@ h1,h2,h3,h4{font-family:"Noto Sans JP","Hiragino Kaku Gothic ProN",sans-serif;fo
     <p style="margin-top:8px;opacity:.9;">だからこそAIを使って作業を時短することが大事です。</p>
     <p style="margin-top:20px;font-size:18px;font-weight:900;color:var(--yellow-accent);">1投稿にかけていた2時間が、30分になったら？</p>
     <div class="result-flow" style="margin-top:28px;">
-      <div class="result-flow__item">
-        <div class="result-flow__icon pink">▶</div>
-        <div>
-          <p style="font-weight:700;">構成に時間をかけられるようになると</p>
-          <p style="color:var(--yellow);font-weight:900;font-size:16px;">ストーリーが見られるようになる</p>
-        </div>
-      </div>
-      <div class="result-flow__item">
-        <div class="result-flow__icon blue">▶</div>
-        <div>
-          <p style="font-weight:700;">フォロワーさんとコミュニケーションを取る時間にあてられると</p>
-          <p style="color:var(--yellow);font-weight:900;font-size:16px;">フォロワーさんとの信頼関係をもっと深く築けるようになる</p>
-        </div>
-      </div>
-      <div class="result-flow__item">
-        <div class="result-flow__icon purple">▶</div>
-        <div>
-          <p style="font-weight:700;">もっと自分の好きなことに時間が使えると</p>
-          <p style="color:var(--yellow);font-weight:900;font-size:16px;">発信に活かすアイデアが増える</p>
-        </div>
-      </div>
+      <div class="result-flow__item"><div class="result-flow__icon pink">▶</div><div><p style="font-weight:700;">構成に時間をかけられるようになると</p><p style="color:var(--yellow);font-weight:900;font-size:16px;">ストーリーが見られるようになる</p></div></div>
+      <div class="result-flow__item"><div class="result-flow__icon blue">▶</div><div><p style="font-weight:700;">フォロワーさんとコミュニケーションを取る時間にあてられると</p><p style="color:var(--yellow);font-weight:900;font-size:16px;">フォロワーさんとの信頼関係をもっと深く築けるようになる</p></div></div>
+      <div class="result-flow__item"><div class="result-flow__icon purple">▶</div><div><p style="font-weight:700;">もっと自分の好きなことに時間が使えると</p><p style="color:var(--yellow);font-weight:900;font-size:16px;">発信に活かすアイデアが増える</p></div></div>
     </div>
     <p style="margin-top:28px;font-size:15px;line-height:2;opacity:.95;">AIとCanvaを活用して、SNS運用をもっと効率よくして<br>これまで出来なくて諦めてしまっていたことや<br>これくらいでいいかな、と思っていた信頼構築に時間をかけることで</p>
     <p style="font-size:18px;font-weight:900;color:var(--yellow);margin-top:16px;">「自分の可能性」をさらに広げていってほしいと願っています！</p>
   </div>
 </section>
-<script>
-const obs=new IntersectionObserver(e=>{e.forEach(el=>{if(el.isIntersecting)el.target.classList.add('visible')})},{threshold:.1});
-document.querySelectorAll('.fade-up').forEach(el=>obs.observe(el));
-</script>
-</body>
-</html>
+<script>const obs=new IntersectionObserver(e=>{e.forEach(el=>{if(el.isIntersecting)el.target.classList.add("visible")})},{threshold:.1});document.querySelectorAll(".fade-up").forEach(el=>obs.observe(el));</script>
+</body></html>
