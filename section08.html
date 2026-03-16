@@ -79,7 +79,7 @@ h1,h2,h3,h4{font-family:"Noto Sans JP","Hiragino Kaku Gothic ProN",sans-serif;fo
 .fade-up.visible{opacity:1;transform:translateY(0)}
 @media(max-width:600px){.section{padding:48px 0}.container{padding:0 16px}.profile-stats{gap:6px;grid-template-columns:repeat(2,1fr)}.profile-stat{padding:8px 12px;font-size:12px}.profile-stat strong{font-size:22px}.reason-grid{grid-template-columns:1fr}.curriculum-header{flex-direction:column;text-align:center}.price-box{padding:36px 20px}.benefit-card{flex-direction:column;text-align:center;align-items:center}}
 </style>
-</head><body>
+</head><body style="margin:0;padding:0;overflow:hidden;">
 <section class="section">
   <div class="container fade-up">
     <span class="section__label">SECTION 08</span>
@@ -106,5 +106,11 @@ h1,h2,h3,h4{font-family:"Noto Sans JP","Hiragino Kaku Gothic ProN",sans-serif;fo
     <p style="font-size:15px;line-height:2;">これまでAIを何から勉強したらいいかわからない…という方にこそ、参加してもらいたい内容となっています！</p>
   </div>
 </section>
-<script>const obs=new IntersectionObserver(e=>{e.forEach(el=>{if(el.isIntersecting)el.target.classList.add("visible")})},{threshold:.1});document.querySelectorAll(".fade-up").forEach(el=>obs.observe(el));</script>
+<script>
+const obs=new IntersectionObserver(e=>{e.forEach(el=>{if(el.isIntersecting)el.target.classList.add("visible")})},{threshold:.1});
+document.querySelectorAll(".fade-up").forEach(el=>obs.observe(el));
+function sendHeight(){window.parent.postMessage({iframeHeight:document.body.scrollHeight},"*");}
+window.addEventListener("load",sendHeight);
+window.addEventListener("resize",sendHeight);
+</script>
 </body></html>
