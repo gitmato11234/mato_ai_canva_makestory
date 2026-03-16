@@ -196,7 +196,7 @@ h1, h2, h3, h4 {
   font-weight: 700;
   white-space: nowrap;
 }
-.profile-stat strong { color: var(--purple); }
+.profile-stat strong { color: var(--purple); font-size: 26px; }
 
 /* ============================
    WHY CANVA
@@ -541,6 +541,7 @@ h1, h2, h3, h4 {
   .container { padding: 0 16px; }
   .profile-stats { gap: 6px; }
   .profile-stat { padding: 8px 12px; font-size: 12px; }
+  .profile-stat strong { font-size: 22px; }
   .reason-grid { grid-template-columns: 1fr; }
   .curriculum-header { flex-direction: column; text-align: center; }
   .price-box { padding: 36px 20px; }
@@ -702,15 +703,21 @@ h1, h2, h3, h4 {
 </section>
 
 <!-- ================================
-     6. 本Brainで手に入るもの
+     6. この講座で手に入るもの
      ================================ -->
 <section class="section">
-  <div class="container fade-up" style="text-align:center;">
+  <div class="container fade-up">
     <span class="section__label">SECTION 06</span>
-    <h2 class="section__title" style="display:inline-block;">本Brainで<span class="accent">手に入るもの</span></h2>
-    <div style="background:var(--gradient-purple); color:#fff; border-radius:16px; padding:36px 28px; margin-top:12px;">
+    <h2 class="section__title">この講座で<span class="accent">手に入るもの</span></h2>
+    <div style="background:var(--gradient-purple); color:#fff; border-radius:16px; padding:36px 28px; margin-top:12px; text-align:center;">
       <p style="font-size:clamp(20px,5vw,28px); font-weight:900; line-height:1.5;">全4回のセミナー<br>アーカイブ動画</p>
       <p style="margin-top:16px; font-size:14px; opacity:0.9;">アーカイブは何度でも見返せるので、<br>自分のペースで学び直しも可能です。</p>
+    </div>
+    <div style="background:var(--gradient-purple); color:#fff; border-radius:16px; padding:36px 28px; margin-top:16px; text-align:center;">
+      <p style="font-size:clamp(20px,5vw,28px); font-weight:900; line-height:1.5;">Discordコミュニティ参加権</p>
+      <p style="display:inline-block; background:rgba(255,255,255,0.2); border-radius:20px; padding:4px 16px; font-size:12px; font-weight:700; margin-top:12px;">3か月の期間限定コミュニティ</p>
+      <p style="margin-top:14px; font-size:14px; opacity:0.9;">3/24（火）までにこのサイトから購入された方限定で<br>参加できるコミュニティです！</p>
+      <p style="margin-top:8px; font-size:14px; opacity:0.9;">講座の参加者同士で交流したり<br>わからないところを質問できる場です！</p>
     </div>
   </div>
 </section>
@@ -879,9 +886,10 @@ h1, h2, h3, h4 {
     <span class="section__label">SECTION 09</span>
     <h2 class="section__title" style="display:inline-block;">価格について</h2>
 
-    <p style="margin-bottom:28px; font-size:14px;">本Brainはセミナーの進行に合わせて随時アップロードされる更新型コンテンツです。<br>更新のお知らせはBrainの「お知らせ機能」を使用します。</p>
+    <p style="margin-bottom:28px; font-size:14px;">この講座ではセミナーの進行に合わせて随時アップロードされる更新型コンテンツです。</p>
 
     <div class="price-box">
+      <p style="font-size:16px; color:var(--text-light); margin-bottom:4px;"><span style="text-decoration:line-through; font-size:20px; color:#999;">定価 ¥14,980</span></p>
       <p style="font-size:14px; font-weight:700; color:var(--pink); margin-bottom:8px;">販売日から5日間限定</p>
       <div class="price-amount"><small>¥</small>9,980</div>
       <div class="price-per">1回あたりのセミナー価格は <strong>2,495円</strong>！</div>
@@ -938,24 +946,11 @@ h1, h2, h3, h4 {
 </section>
 
 <!-- ================================
-     11. コンテンツ一覧
-     ================================ -->
-<section class="section">
-  <div class="container fade-up" style="text-align:center;">
-    <span class="section__label">SECTION 11</span>
-    <h2 class="section__title" style="display:inline-block;">コンテンツ一覧<span style="font-size:14px; font-weight:400; color:var(--text-light);">（随時アップロード）</span></h2>
-    <div style="background:var(--gray-bg); border-radius:16px; padding:36px 28px;">
-      <p style="font-size:15px; color:var(--text-light);">こちらに随時アップロードしていきます！</p>
-    </div>
-  </div>
-</section>
-
-<!-- ================================
-     12. 購入者3大特典
+     11. 購入者3大特典
      ================================ -->
 <section class="section section--pink">
   <div class="container fade-up">
-    <span class="section__label">SECTION 12</span>
+    <span class="section__label">SECTION 11</span>
     <h2 class="section__title">購入者<span class="accent">3大特典</span></h2>
 
     <div class="benefit-grid">
@@ -983,9 +978,9 @@ h1, h2, h3, h4 {
     </div>
 
     <ul class="notes-list" style="margin-top:24px;">
-      <li>本Brainはセミナーの進行に合わせて更新します。</li>
-      <li>もくもく会の日程はBrainの通知でご案内します。</li>
-      <li>更新があった際は、Brainの通知でお知らせします。</li>
+      <li>この講座ではセミナーの進行に合わせて更新します。</li>
+      <li>もくもく会の日程は通知でご案内します。</li>
+      <li>更新があった際は、通知でお知らせします。</li>
     </ul>
   </div>
 </section>
